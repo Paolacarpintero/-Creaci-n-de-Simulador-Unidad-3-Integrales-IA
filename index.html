@@ -666,3 +666,184 @@ Divergente.
 </div>
 
 </section>
+
+  <!-- ===========================
+TARJETAS DE ESTUDIO
+=========================== -->
+
+<section id="flashcards">
+
+<h2>Tarjetas de Estudio</h2>
+
+<div class="flash" onclick="this.innerHTML='<h3>Respuesta</h3><p>Es la familia de funciones cuya derivada es la función dada.</p>'">
+<h3>¿Qué es una integral indefinida?</h3>
+<p>Haz clic para ver la respuesta.</p>
+</div>
+
+<div class="flash" onclick="this.innerHTML='<h3>Respuesta</h3><p>La constante de integración representa todas las posibles antiderivadas.</p>'">
+<h3>¿Qué representa la constante C?</h3>
+<p>Haz clic para ver la respuesta.</p>
+</div>
+
+<div class="flash" onclick="this.innerHTML='<h3>Respuesta</h3><p>Cuando existe una función dentro de otra función.</p>'">
+<h3>¿Cuándo se utiliza sustitución?</h3>
+<p>Haz clic para ver la respuesta.</p>
+</div>
+
+<div class="flash" onclick="this.innerHTML='<h3>Respuesta</h3><p>Cuando aparece el producto de dos funciones.</p>'">
+<h3>¿Cuándo se utiliza integración por partes?</h3>
+<p>Haz clic para ver la respuesta.</p>
+</div>
+
+<div class="flash" onclick="this.innerHTML='<h3>Respuesta</h3><p>Permite calcular el área bajo una curva.</p>'">
+<h3>¿Qué representa una integral definida?</h3>
+<p>Haz clic para ver la respuesta.</p>
+</div>
+
+</section>
+
+<!-- ===========================
+EXAMEN
+=========================== -->
+
+<section id="quiz">
+
+<h2>Simulador del Examen</h2>
+
+<div class="question">
+
+<p><b>1. ¿Cuál es la integral de \(2x\)?</b></p>
+
+<button class="option" onclick="respuesta(this,true)">x² + C</button>
+
+<button class="option" onclick="respuesta(this,false)">2 + C</button>
+
+<button class="option" onclick="respuesta(this,false)">x + C</button>
+
+</div>
+
+<div class="question">
+
+<p><b>2. ¿Qué método utilizarías para \(\int2x(x^2+1)^5dx\)?</b></p>
+
+<button class="option" onclick="respuesta(this,true)">Sustitución</button>
+
+<button class="option" onclick="respuesta(this,false)">Fracciones parciales</button>
+
+<button class="option" onclick="respuesta(this,false)">Por partes</button>
+
+</div>
+
+<div class="question">
+
+<p><b>3. El Teorema Fundamental del Cálculo afirma que:</b></p>
+
+<button class="option" onclick="respuesta(this,true)">La integral definida se obtiene evaluando la antiderivada.</button>
+
+<button class="option" onclick="respuesta(this,false)">Toda integral es impropia.</button>
+
+<button class="option" onclick="respuesta(this,false)">Siempre se usa sustitución.</button>
+
+</div>
+
+<div class="question">
+
+<p><b>4. Una integral impropia aparece cuando:</b></p>
+
+<button class="option" onclick="respuesta(this,true)">Existe un límite infinito o discontinuidad.</button>
+
+<button class="option" onclick="respuesta(this,false)">La función es lineal.</button>
+
+<button class="option" onclick="respuesta(this,false)">La derivada es cero.</button>
+
+</div>
+
+<div class="question">
+
+<p><b>5. ¿Qué significa la constante C?</b></p>
+
+<button class="option" onclick="respuesta(this,true)">Constante de integración.</button>
+
+<button class="option" onclick="respuesta(this,false)">Constante matemática.</button>
+
+<button class="option" onclick="respuesta(this,false)">Constante de Euler.</button>
+
+</div>
+
+<h2 id="resultado"></h2>
+
+<button
+class="option"
+onclick="calificar()">
+
+Calificar examen
+
+</button>
+
+</section>
+
+<footer>
+
+Proyecto Académico
+
+<br>
+
+Simulador de Estudio
+
+<br>
+
+Unidad 3 - Cálculo de una Variable
+
+</footer>
+
+<script>
+
+let nota=0;
+
+let respondidas=[];
+
+function mostrar(id){
+
+document.querySelectorAll("section").forEach(sec=>{
+
+sec.classList.remove("active");
+
+});
+
+document.getElementById(id).classList.add("active");
+
+window.scrollTo(0,0);
+
+}
+
+function respuesta(boton,correcta){
+
+if(boton.dataset.ok)return;
+
+boton.dataset.ok="1";
+
+if(correcta){
+
+nota++;
+
+boton.style.background="green";
+
+}
+
+else{
+
+boton.style.background="red";
+
+}
+
+}
+
+function calificar(){
+
+document.getElementById("resultado").innerHTML=
+
+"Tu calificación fue: "+nota+" / 5";
+
+}
+
+</script>
