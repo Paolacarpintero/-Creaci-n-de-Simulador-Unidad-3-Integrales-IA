@@ -357,3 +357,312 @@ Aquí encontrarás teoría, ejemplos, fórmulas importantes, tarjetas de estudio
 </div>
 
 </section>
+  
+  <!-- ===========================
+CONTENIDO 3.1
+=========================== -->
+
+<section id="tema1">
+
+<h2>Contenido 3.1 - Integral indefinida y antiderivadas</h2>
+
+<p>
+La <b>integral indefinida</b> consiste en encontrar una función cuya derivada sea la función dada.
+Se representa como:
+</p>
+
+<div class="example">
+<p>$$\int f(x)\,dx=F(x)+C$$</p>
+</div>
+
+<h3>Propiedades</h3>
+
+<div class="card">
+<p>• La derivada y la integral son operaciones inversas.</p>
+<p>• Siempre aparece la constante de integración <b>C</b>.</p>
+<p>• La integral es lineal.</p>
+</div>
+
+<h3>Fórmulas básicas</h3>
+
+<div class="example">
+
+<p>$$\int x^n dx=\frac{x^{n+1}}{n+1}+C \qquad n\neq -1$$</p>
+
+<p>$$\int \frac1x dx=\ln|x|+C$$</p>
+
+<p>$$\int e^x dx=e^x+C$$</p>
+
+<p>$$\int \sin(x)dx=-\cos(x)+C$$</p>
+
+<p>$$\int \cos(x)dx=\sin(x)+C$$</p>
+
+</div>
+
+<h3>Ejemplo</h3>
+
+<div class="example">
+
+<p>Resolver:</p>
+
+<p>$$\int 4x^3dx$$</p>
+
+<p>Resultado:</p>
+
+<p>$$x^4+C$$</p>
+
+</div>
+
+</section>
+
+<!-- ===========================
+CONTENIDO 3.2
+=========================== -->
+
+<section id="tema2">
+
+<h2>Contenido 3.2 - Métodos de integración</h2>
+
+<h3>1. Sustitución</h3>
+
+<p>
+Se utiliza cuando existe una función dentro de otra.
+</p>
+
+<div class="example">
+
+<p>$$u=x^2+1$$</p>
+
+<p>$$du=2xdx$$</p>
+
+<p>$$\int2x(x^2+1)^5dx$$</p>
+
+<p>Resultado:</p>
+
+<p>$$\frac{(x^2+1)^6}{6}+C$$</p>
+
+</div>
+
+<h3>2. Integración por partes</h3>
+
+<div class="example">
+
+<p>$$\int udv=uv-\int vdu$$</p>
+
+</div>
+
+<p>
+Se utiliza cuando existe un producto entre funciones.
+</p>
+
+<div class="example">
+
+<p>$$\int xe^xdx$$</p>
+
+<p>Resultado</p>
+
+<p>$$xe^x-e^x+C$$</p>
+
+</div>
+
+<h3>3. Fracciones parciales</h3>
+
+<p>
+
+Cuando la función es racional.
+
+</p>
+
+<div class="example">
+
+<p>
+
+$$\frac{3x+5}{(x+1)(x+2)}$$
+
+</p>
+
+</div>
+
+<h3>4. Integrales estándar</h3>
+
+<div class="example">
+
+<p>
+
+$$\int\frac1{a^2+x^2}dx=\frac1a\tan^{-1}\left(\frac xa\right)+C$$
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===========================
+CONTENIDO 3.3
+=========================== -->
+
+<section id="tema3">
+
+<h2>Contenido 3.3 - Integral definida y Teorema Fundamental del Cálculo</h2>
+
+<p>
+
+Una integral definida permite calcular áreas bajo una curva.
+
+</p>
+
+<div class="example">
+
+<p>
+
+$$\int_a^b f(x)dx$$
+
+</p>
+
+</div>
+
+<h3>Teorema Fundamental</h3>
+
+<div class="example">
+
+<p>
+
+Si
+
+</p>
+
+<p>
+
+$$F'(x)=f(x)$$
+
+</p>
+
+<p>
+
+Entonces
+
+</p>
+
+<p>
+
+$$\int_a^b f(x)dx=F(b)-F(a)$$
+
+</p>
+
+</div>
+
+<h3>Ejemplo</h3>
+
+<div class="example">
+
+<p>
+
+$$\int_1^3 2xdx$$
+
+</p>
+
+<p>
+
+Antiderivada:
+
+</p>
+
+<p>
+
+$$x^2$$
+
+</p>
+
+<p>
+
+Resultado:
+
+</p>
+
+<p>
+
+$$9-1=8$$
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===========================
+CONTENIDO 3.4
+=========================== -->
+
+<section id="tema4">
+
+<h2>Contenido 3.4 - Integrales impropias</h2>
+
+<p>
+
+Las integrales impropias aparecen cuando:
+
+</p>
+
+<div class="card">
+
+<p>• Uno de los límites es infinito.</p>
+
+<p>• La función presenta discontinuidades.</p>
+
+</div>
+
+<h3>Ejemplo 1</h3>
+
+<div class="example">
+
+<p>
+
+$$\int_1^\infty \frac1{x^2}dx$$
+
+</p>
+
+<p>
+
+Resultado:
+
+</p>
+
+<p>
+
+$$1$$
+
+</p>
+
+<p>
+
+Convergente.
+
+</p>
+
+</div>
+
+<h3>Ejemplo 2</h3>
+
+<div class="example">
+
+<p>
+
+$$\int_1^\infty\frac1x dx$$
+
+</p>
+
+<p>
+
+Resultado:
+
+</p>
+
+<p>
+
+Divergente.
+
+</p>
+
+</div>
+
+</section>
