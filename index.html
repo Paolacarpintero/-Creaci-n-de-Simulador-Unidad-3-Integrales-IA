@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+
+SIMULADOR DE ESTUDIO
+UNIDAD 3
+CÁLCULO DE UNA VARIABLE
+
+</title>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<style>
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:Arial,Helvetica,sans-serif;
+
+}
+
+body{
+
+background:#edf2f7;
+
+}
+
+header{
+
+background:#003366;
+
+color:white;
+
+padding:25px;
+
+text-align:center;
+
+font-size:30px;
+
+font-weight:bold;
+
+}
+
+.sub{
+
+font-size:18px;
+
+margin-top:10px;
+
+}
+
+nav{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+padding:20px;
+
+background:white;
+
+box-shadow:0 2px 8px rgba(0,0,0,.2);
+
+}
+
+nav button{
+
+padding:14px 25px;
+
+background:#0055aa;
+
+border:none;
+
+color:white;
+
+border-radius:8px;
+
+cursor:pointer;
+
+font-size:16px;
+
+transition:.3s;
+
+}
+
+nav button:hover{
+
+background:#003366;
+
+}
+
+section{
+
+display:none;
+
+max-width:1100px;
+
+margin:auto;
+
+margin-top:30px;
+
+background:white;
+
+padding:35px;
+
+border-radius:12px;
+
+box-shadow:0 0 15px rgba(0,0,0,.15);
+
+}
+
+.active{
+
+display:block;
+
+}
+
+h2{
+
+color:#003366;
+
+margin-bottom:20px;
+
+}
+
+h3{
+
+margin-top:25px;
+
+color:#0055aa;
+
+}
+
+p{
+
+line-height:1.8;
+
+margin:15px 0;
+
+}
+
+.card{
+
+background:#eef7ff;
+
+padding:18px;
+
+margin:18px 0;
+
+border-left:7px solid #0055aa;
+
+border-radius:8px;
+
+}
+
+.flash{
+
+background:#fff9db;
+
+padding:20px;
+
+border-radius:10px;
+
+margin-top:20px;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+.flash:hover{
+
+transform:scale(1.03);
+
+}
+
+.example{
+
+background:#f7f7f7;
+
+padding:20px;
+
+margin-top:20px;
+
+border-radius:8px;
+
+}
+
+.question{
+
+background:white;
+
+padding:20px;
+
+margin:25px 0;
+
+border-radius:8px;
+
+box-shadow:0 0 8px rgba(0,0,0,.2);
+
+}
+
+button.option{
+
+display:block;
+
+margin-top:12px;
+
+width:100%;
+
+padding:12px;
+
+font-size:16px;
+
+background:#0055aa;
+
+color:white;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+button.option:hover{
+
+background:#003366;
+
+}
+
+#resultado{
+
+font-size:28px;
+
+font-weight:bold;
+
+color:#003366;
+
+margin-top:25px;
+
+text-align:center;
+
+}
+
+footer{
+
+margin-top:40px;
+
+padding:20px;
+
+background:#003366;
+
+color:white;
+
+text-align:center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+SIMULADOR DE ESTUDIO
+
+<div class="sub">
+
+UNIDAD 3
+
+Integrales y Métodos de Integración
+
+</div>
+
+</header>
+
+<nav>
+
+<button onclick="mostrar('inicio')">Inicio</button>
+
+<button onclick="mostrar('tema1')">Contenido 3.1</button>
+
+<button onclick="mostrar('tema2')">Contenido 3.2</button>
+
+<button onclick="mostrar('tema3')">Contenido 3.3</button>
+
+<button onclick="mostrar('tema4')">Contenido 3.4</button>
+
+<button onclick="mostrar('flashcards')">Tarjetas</button>
+
+<button onclick="mostrar('quiz')">Examen</button>
+
+</nav>
+
+<section id="inicio" class="active">
+
+<h2>Bienvenido</h2>
+
+<p>
+
+Este simulador fue desarrollado para estudiar la Unidad 3 de la asignatura
+
+<strong>Cálculo de una Variable.</strong>
+
+</p>
+
+<p>
+
+Aquí encontrarás teoría, ejemplos, fórmulas importantes, tarjetas de estudio y un examen para evaluar tus conocimientos.
+
+</p>
+
+<div class="card">
+
+<b>Temas incluidos</b>
+
+<ul>
+
+<li>Integral indefinida y antiderivadas.</li>
+
+<li>Métodos de integración.</li>
+
+<li>Integral definida.</li>
+
+<li>Teorema Fundamental del Cálculo.</li>
+
+<li>Integrales impropias.</li>
+
+</ul>
+
+</div>
+
+</section>
